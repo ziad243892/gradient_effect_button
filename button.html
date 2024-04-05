@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Button</title>
+        <style>
+            .li-class {
+            list-style-type: none;
+            }
+            .li-class a {
+            position: relative;
+            padding: 12px 32px;
+            box-sizing: border-box;
+            color: #000;
+            background: #fff;
+            background-clip: padding-box;
+            border: solid 0px transparent;
+            border-radius: 36px;
+            cursor: pointer;
+            transition: all 0.3s;
+            z-index: unset;
+            bottom: 12px;
+            }
+            .li-class a:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            margin: -3px;
+            border-radius: 36px;
+            background: linear-gradient(to left, #8e3870, #e87d69);
+            }
+            .li-class a:after {
+            content: 'I AM A BUTTON';
+            background: linear-gradient(to left, #8e3870, #e87d69);
+            -webkit-background-clip: text;
+            color: transparent;
+            }
+            .li-class a:hover {
+            background: #fff;
+            }
+            .li-class a:hover::after {
+            color: #e87d69;
+            }
+            .li-class a span {
+            display: none;
+            }
+        </style>
+    </head>
+    <body style="padding-top: 25px;">
+        <li class="li-class">
+            <a>
+            <span>I AM A BUTTON</span>
+            </a>
+        </li>
+    </body>
+</html>
